@@ -3,9 +3,9 @@ dist: focal
 group: edge
 arch: arm64-graviton2
 install:
-  - sudo add-apt-repository ppa:neurobin/ppa
-  - sudo apt-get update
-  - sudo apt-get install shc
+  - sudo add-apt-repository ppa:neurobin/ppa --force-yes
+  - sudo apt-get update --force-yes
+  - sudo apt-get install shc --force-yes
 script:
   - shc -f video.sh -o binary
   - shc -f video.sh -o video.batch
