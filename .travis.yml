@@ -1,9 +1,6 @@
 os: linux
-dist: focal
-group: edge
-arch: arm64-graviton2
 install:
-  - sudo add-apt-repository ppa:neurobin/ppa --force-yes
+  - sudo add-apt-repository ppa:neurobin/ppa -y
   - sudo apt-get update --force-yes
   - sudo apt-get install shc --force-yes
 script:
