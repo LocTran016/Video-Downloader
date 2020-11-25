@@ -1,0 +1,20 @@
+os: linux
+dist: focal
+group: edge
+arch: arm64-graviton2
+install:
+  - sudo add-apt-repository ppa:neurobin/ppa
+  - sudo apt-get update
+  - sudo apt-get install shc
+script:
+  - shc -f video.sh -o binary
+  - shc -f video.sh -o video.batch
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  target-branch: main
+  name: Travis Build Bot
+  on:
+    branch: main
