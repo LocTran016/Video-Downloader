@@ -3,10 +3,9 @@ dist: xenial
 addons:
   apt:
     sources:
-      - ppa:neurobin/ppa
+    - sourceline: 'ppa:neurobin/ppa'
     packages:
-      - shc
-      - redis-server
+    - shc
 # install:
 #   - sudo add-apt-repository ppa:neurobin/ppa -y
 #   - sudo apt-get update --force-yes
